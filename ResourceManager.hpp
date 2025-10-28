@@ -8,17 +8,17 @@ class ResourceManager
 public:
 	ResourceManager()
 	{
-		zasob = new Resource;
+		zasob;
 	}
-	~ResourceManager()
-	{
-		delete [] zasob;
-	}
+	//~ResourceManager()
+	//{
+		//zasob.destr;
+	//}
 	//ResourceManager(const ResourceManager& t) : zasob{ t.zasob } {}
 	double get()
 	{
-		return zasob[0].get();
+		return zasob.get();
 	}
 private:
-	Resource* zasob;
+	Resource zasob;
 };
