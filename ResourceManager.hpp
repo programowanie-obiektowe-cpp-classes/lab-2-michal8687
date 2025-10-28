@@ -14,7 +14,7 @@ public:
 	{
 		delete [] zasob;
 	}
-	ResourceManager(const ResourceManager& t) : zasob{ t.zasob } {}
+	//ResourceManager(const ResourceManager& t) : zasob{ t.zasob } {}
 	double get()
 	{
 		return zasob[0].get();
