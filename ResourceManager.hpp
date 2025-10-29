@@ -10,15 +10,15 @@ public:
 	{
 		zasob;
 	}
-	//~ResourceManager()
-	//{
-		//zasob.destr;
-	//}
-	//ResourceManager(const ResourceManager& t) : zasob{ t.zasob } {}
+	~ResourceManager()
+	{
+		delete zasob;
+	}
+	ResourceManager(const ResourceManager& t) : zasob{ t.zasob } {}
 	double get()
 	{
-		return zasob.get();
+		return zasob[0].get();
 	}
 private:
-	Resource zasob;
+	Resource* zasob;
 };
